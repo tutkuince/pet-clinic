@@ -5,7 +5,7 @@
 
     <groupId>com.muditasoft</groupId>
     <artifactId>pet-clinic</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
 
     <modules>
         <module>pet-clinic-data</module>
@@ -29,10 +29,6 @@
         <java.version>11</java.version>
     </properties>
 
-    <dependencies>
-
-    </dependencies>
-
     <build>
         <plugins>
             <plugin>
@@ -42,8 +38,19 @@
                     <skip>true</skip>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <configuration>
+                    <goals>install</goals>
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
-
+    <scm>
+        <developerConnection>scm:git:git@github.com:tutkuince/pet-clinic.git</developerConnection>
+        <tag>pet-clinic-0.0.1</tag>
+    </scm>
 
 </project>
